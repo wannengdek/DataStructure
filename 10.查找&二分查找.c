@@ -60,7 +60,6 @@ int lenth(PNODE head)
 	int len =0;
 	while(NULL!=p)
 	{
-		
 		p=p->p ;
 		++len ;
 	} 
@@ -119,7 +118,7 @@ void Insert(PNODE head,int insert,int insert_val)
 		++i ;
 	}// 通过循环来判断当前有多少个节点 并且将所要 操作的结点赋值 给 p 
 	if(i>insert-1||NULL==p)  //判断链表是否为空 
-		printf("插入失败") ;
+		printf("插入失败\n") ;
 	PNODE pnew = (PNODE)malloc(sizeof(NODE)) ;
 	if(NULL == pnew)
 	{
@@ -151,7 +150,7 @@ int Get(PNODE head,int i) //按序号查找当前加点
 		x= p->data ;
 	}
 }
-void delete_val(head,delete_position)
+void delete_val(PNODE head,int delete_position)
 {
 	int i= 0 ;
 	PNODE p = head ; 
@@ -174,31 +173,72 @@ void delete_val(head,delete_position)
 	p->p = n->p ; // 将 n的下一个指向那赋值给   所删除结点前的结点   
 	printf("删除成功\n");
 	traverse(head);
-	free(head);
+//	free(head);  //因为free当前链表 所以 此步之后的 链表为空  一直死循环 
 }
+void select1(PNODE head,int val)//按位置查 是否有这个结点 
+{
+	PNODE s = head ;
+	int j= 0;
+
+	while(s->p&&j<val)
+	{ 
+	    s = s->p;
+        j++;
+	}
+	if(j==val)
+	{
+		printf(	"\t第%d个\n",val);
+	}    
+	else
+	{
+		printf("查找失败\n");
+	} 	
+}
+void select2(PNODE head,int val)//按值查 这个值在第几个结点 
+{
+        int j=1;
+        PNODE p = head->p ; 
+        while(p&&p->data!=val)
+		{
+            p=p->p;
+            ++j;
+        }
+        if(p){
+        	printf("所要查找的结点为第%d个",j);
+        }else{
+		printf("ssss"); //失败，返回0
+        }
+	printf("\n") ;
+	traverse(head); 
+} 
+
 int main()
 {
-	
-	clock_t start, stop;
-	start = clock();
-	
 	PNODE head = NULL ;
 	head = creat();
 	traverse(head) ; 
 	
-	int len=lenth(head) ; 	
+//	int len=lenth(head) ; 	
 	int insert,insert_val ; 
-	printf("这个链表的长度是%d\n",len);
+//	printf("这个链表的长度是%d\n",len);
 //	printf("请输入要插入节点的位置(不可以大于%d)",len);
 //	scanf("%d",&insert);
 //	
 //	printf("请输入要插入节点的值");
 //	scanf("%d",&insert_val);
-//	Insert(head,insert,insert_val);
+	
 	Insert(head,1,99);
 	int delete_position = 2 ;
 	delete_val(head,delete_position);
 	
+	int val = 1 ;
+//	select1(head,2);
+	select2(head,val);
+
+//	printf("\t第%d个\n",position); 
+
+	clock_t start, stop;
+	start = clock();
 	
 	stop = clock();
 	double duration = ((double)(stop - start)) / CLK_TCK;
