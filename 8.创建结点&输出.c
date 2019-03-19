@@ -12,7 +12,6 @@ PNODE creat()
 	int len ;
 	int i;
 	int val;
-	
 	PNODE head =(PNODE)malloc(sizeof(NODE)) ;
 	if(NULL == head) 
 	{
@@ -21,14 +20,12 @@ PNODE creat()
 	}
 	PNODE last = head ;
 	last->p =NULL ;
-	
 	printf("输入链表节点的个数：len=");
 	scanf("%d",&len) ;
 	for(i=0;i<len;i++)
 	{
 		printf("请输入第%d个节点的值：",i+1) ;
 		scanf("%d",&val) ;
-		
 		PNODE pNew =(PNODE)malloc(sizeof(NODE)) ; //创建一个新的指针节点  用来存放临时数据 
 		if(NULL == pNew) 
 		{
