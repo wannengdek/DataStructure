@@ -5,9 +5,10 @@
 
 typedef struct Node 
 {
-	int data ;
-	struct Node * p;	
+	int data ;  //数据域 
+	struct Node * p;	// 指向下一个指针 
 }NODE,*PNODE;
+
 PNODE creat()
 {
 	int len ;
@@ -199,9 +200,9 @@ PNODE getToBeDel(PNODE head,int pos)
 }
 void delete_O1(PNODE head,PNODE tobeDel)
 {
+	//  tobeDel 的类型是 struct Node * 类型 即 指向删除节点的指针 
 	int i= 0 ;
 	PNODE listHead = head ; 
-
 	if(listHead==NULL)  //判断链表是否为空 
 	{
 		printf("删除失败") ;
@@ -209,12 +210,21 @@ void delete_O1(PNODE head,PNODE tobeDel)
 	}	 
 	if(tobeDel->p!=NULL)
 	{
-		PNODE pNext=tobeDel->p;
-		tobeDel->data=pNext->data;
-		tobeDel->p=pNext->p ;
+		//举例  删除下图中的  i 节点 
+		PNODE pNext = tobeDel->p; 
+		//将要删除的节点的指针 赋值给 新节点 
+		// （a） 中  i指向下一个节点的 指针赋值给  新节点 
+		// 此时   新节点->j 
+		
+		tobeDel->data = pNext->data;
+		// 将 j 节点的值  赋值给    i 节点   
+		
+		tobeDel->p = pNext->p ;
+		//将 新节点所要指向的下一个节点 赋值给 要删除节点的上一个节点
+		// 将 j节点  指向的下一个节点的指针赋值给  h 节点   
+		// 此时  h>j>... 
 		
 		printf("删除节点的值为：%d\n",pNext->data); 
-		
 		free(pNext);
 	}
 	// 链表中只有一个节点，删除头结点。 
@@ -222,6 +232,7 @@ void delete_O1(PNODE head,PNODE tobeDel)
 	{
 		free(listHead);
 		free(tobeDel);
+		printf("链表中只有一个节点，删除第一个节点，此时链表为空\n"); 
 	}
 	//链表中有多个节点，删除尾节点 
 	else
@@ -250,13 +261,10 @@ int main()
 	int insert,insert_val ; 
 	printf("这个链表的长度是%d\n",len);
 	
-//	int a=Get(head,4);
-//	printf("第4个元素是%d\n",a);
-	
 	PNODE tobeDel = NULL ;
-	int b=3;
+	int b=1;
 	tobeDel = getToBeDel(head,b);
-	printf("删除第%d个结点",b); 
+	printf("删除第%d个结点\n",b); 
 	
 	delete_O1(head,tobeDel);
 	

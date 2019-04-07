@@ -2,25 +2,25 @@
 #include <stdbool.h>
 #include <malloc.h>
 #include <stdlib.h>
-struct Arr
+typedef struct Arr
 {
 	int *p ; //存储的是数组第一个元素的地址 
 	int len ; //数组所能容纳的最大元素的个数 
 	int cnt ; //当前数组有效元素的个数 
- }; 
-void init(struct Arr *pArr, int lenth) ;
-bool append(struct Arr *pArr, int val);
-bool insert(struct Arr *pArr, int pos,int val);// pos 的值从1开始 
-bool delete_arr(struct Arr *pArr, int pos,int *pVal);
+}ar; 
+void init(ar  *pArr, int lenth) ;
+bool append(ar  *pArr, int val);
+bool insert(ar  *pArr, int pos,int val);// pos 的值从1开始 
+bool delete_arr(ar  *pArr, int pos,int *pVal);
 int get();
-bool empty(struct Arr *pArr);
+bool empty(ar  *pArr);
 bool full();
-void sort(struct Arr *pArr);
-void show(struct Arr *pArr);
-void inversion(struct Arr *pArr);//倒置 
+void sort(ar  *pArr);
+void show(ar  *pArr);
+void inversion(ar  *pArr);//倒置 
 
 
-bool empty(struct Arr *pArr)
+bool empty(ar  *pArr)
 {
 	if(0==pArr->cnt)
 		return true ;
@@ -29,7 +29,7 @@ bool empty(struct Arr *pArr)
 	
 }
 
-void init(struct Arr *pArr, int lenth)
+void init(ar  *pArr, int lenth)
 {
 	//该函数功能为初始化数组    
 	pArr->p = (int *)malloc (sizeof(int) * lenth) ;
@@ -48,7 +48,7 @@ void init(struct Arr *pArr, int lenth)
 	 
 } 
 
-void show(struct Arr *pArr)
+void show(ar  *pArr)
 {
 	if(empty(pArr))
 	{
@@ -65,7 +65,7 @@ void show(struct Arr *pArr)
 	printf("--------show-----\n");
 }
 
-bool full(struct Arr *pArr)
+bool full(ar  *pArr)
 {
 	if(pArr->cnt==pArr->len)
 		return true ;
@@ -73,7 +73,7 @@ bool full(struct Arr *pArr)
 		return false ;
 }
 
-bool append(struct Arr *pArr, int val)
+bool append(ar  *pArr, int val)
 {
 	//该函数功能为  为数组追加元素 且默认追加到数组末尾   
 	if(full(pArr))
@@ -89,7 +89,7 @@ bool append(struct Arr *pArr, int val)
 	}
 }
 
-bool insert(struct Arr *pArr, int pos,int val)
+bool insert(ar  *pArr, int pos,int val)
 {
 	//该函数功能为插入元素  pos 代表位置   val代表插入的值 
 	int i;
@@ -113,7 +113,7 @@ bool insert(struct Arr *pArr, int pos,int val)
 	return true ;
 }
 
-bool delete_arr(struct Arr *pArr, int pos,int *pVal)
+bool delete_arr(ar  *pArr, int pos,int *pVal)
 {
 	int i ;
 	if(empty(pArr))
@@ -130,7 +130,7 @@ bool delete_arr(struct Arr *pArr, int pos,int *pVal)
 	return true ; 
 }
 
-void inversion(struct Arr *pArr)
+void inversion(ar  *pArr)
 {
 	printf("倒置\n");
 	int i =0 ;
@@ -150,7 +150,7 @@ void inversion(struct Arr *pArr)
 	
 }
 
-void sort(struct Arr *pArr)
+void sort(ar  *pArr)
 {
 	printf("开始排序，从小到大\n");
 	int i, j,t; int m=0;
@@ -175,11 +175,16 @@ void sort(struct Arr *pArr)
 	}
 	printf("排序结束\n");
 }
+void f(int * a)
+{
+	*a=100;
+}
 int main()
 {
-	struct Arr arr ;
-	int val ;
 	
+	ar  arr ;
+	int val ;
+	 
 	init(&arr,6) ;
 	show(&arr) ;
 	append(&arr,1) ; 
@@ -206,6 +211,6 @@ int main()
 	show(&arr);
 	inversion(&arr);
 	show(&arr);
-	//printf("%d" ,arr.len) ;
+	//printf("%d" ,Arr.len) ;
 	return 0;
 } 
