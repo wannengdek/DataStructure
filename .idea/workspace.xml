@@ -48,9 +48,9 @@
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds" extendedState="7">
-    <option name="x" value="328" />
-    <option name="y" value="126" />
+  <component name="ProjectFrameBounds">
+    <option name="x" value="406" />
+    <option name="y" value="67" />
     <option name="width" value="1519" />
     <option name="height" value="898" />
   </component>
@@ -135,7 +135,8 @@
       <updated>1563450664914</updated>
       <workItem from="1563450666542" duration="3727000" />
       <workItem from="1563535380181" duration="612000" />
-      <workItem from="1563712202285" duration="529000" />
+      <workItem from="1563712202285" duration="1019000" />
+      <workItem from="1563725444656" duration="1115000" />
     </task>
     <task id="LOCAL-00001" summary="左神算法第一章">
       <created>1563462310276</created>
@@ -162,13 +163,13 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="4868000" />
+    <option name="totallyTimeSpent" value="6473000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1936" height="1066" extended-state="6" />
+    <frame x="406" y="67" width="1519" height="898" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.20788912" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.21041809" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Designer" order="2" />
       <window_info id="JRebel" order="3" side_tool="true" />
@@ -187,7 +188,7 @@
       <window_info anchor="bottom" id="Docker" order="8" show_stripe_button="false" />
       <window_info anchor="bottom" id="Event Log" order="9" side_tool="true" />
       <window_info anchor="bottom" id="Database Changes" order="10" />
-      <window_info anchor="bottom" id="Version Control" order="11" visible="true" weight="0.24889868" />
+      <window_info anchor="bottom" id="Version Control" order="11" visible="true" weight="0.24864864" />
       <window_info anchor="bottom" id="JRebel Executor" order="12" />
       <window_info anchor="bottom" id="JRebel Console" order="13" side_tool="true" />
       <window_info anchor="bottom" id="MyBatis Log" order="14" />
@@ -235,9 +236,6 @@
     <entry file="file://$PROJECT_DIR$/数据结构/DataStructure.iml">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/左神算法/第二章.md">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/README.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="SPLIT">
@@ -247,6 +245,9 @@
           <second_editor />
         </state>
       </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/左神算法/第二章.md">
+      <provider selected="true" editor-type-id="text-editor" />
     </entry>
   </component>
   <component name="masterDetails">
