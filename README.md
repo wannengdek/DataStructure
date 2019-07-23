@@ -1,7 +1,9 @@
-# 数据结构
+# 数据结构与算法
 
 <a href="https://github.com/wannengdek/DataStructure/blob/master/左神算法/第一章.md">
-  1、[左神算法第一章 简单排序、荷兰国旗问题、随机快速排序]</a>
+  1、左神算法第一章 简单排序、荷兰国旗问题、随机快速排序</a>
+
+<a href="https://github.com/wannengdek/DataStructure/blob/master/左神算法/第二章.md">2、左神算法第二章 桶排序</a>
 
 # Spring Boot
 
