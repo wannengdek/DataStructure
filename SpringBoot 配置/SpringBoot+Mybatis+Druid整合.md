@@ -1,4 +1,17 @@
-## Spring Boot + Mybatis+Druid 整合
+# Spring Boot + Mybatis+Druid 整合
+
+  * [Spring Boot + Mybatis+Druid 整合](#spring-boot--mybatisdruid-整合)
+    * [1、新建项目](#1、新建项目)
+    * [2、新建application.yml 修改相关配置](#2、新建applicationyml-修改相关配置)
+      * [数据源基本配置](#数据源基本配置)
+      * [数据源其他配置](#数据源其他配置)
+      * [配置监控统计拦截的filters，去掉后监控界面sql无法统计，'wall'用于防火墙](#配置监控统计拦截的filters，去掉后监控界面sql无法统计，wall用于防火墙)
+      * [指定全局配置文件位置](#指定全局配置文件位置)
+      * [指定sql映射文件位置](#指定sql映射文件位置)
+    * [3、新建config包进行配置Druid](#3、新建config包进行配置druid)
+    * [4 、resources 目录下配置mybatis-config.xml](#4-、resources-目录下配置mybatis-configxml)
+    * [**5、配置相应的实体类、mapper、mapper.xml**](#5、配置相应的实体类、mapper、mapperxml)
+    * [6、测试](#6、测试)
 
 ### 1、新建项目
 
