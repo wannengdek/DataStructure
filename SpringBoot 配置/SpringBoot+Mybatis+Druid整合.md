@@ -388,3 +388,11 @@ http://localhost:8080/druid/login.html
 ![1563775928038](Untitled.assets/1563775928038.png)
 
 至此完成配置
+
+
+
+
+
+
+
+6LPEBF
