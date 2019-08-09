@@ -31,16 +31,6 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Java基础/第一章.md">
-          <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-            <state split_layout="SPLIT">
-              <first_editor />
-              <second_editor />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/左神算法/第二章/2.md">
           <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
             <state split_layout="SPLIT">
@@ -53,10 +43,22 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/左神算法/第一章/第一章.md">
+        <entry file="file://$PROJECT_DIR$/Java基础/第一章 基础回顾.md">
           <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
             <state split_layout="SPLIT">
-              <first_editor />
+              <first_editor relative-caret-position="-324" />
+              <second_editor />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/Java基础/第二章 设计模式（单例设计模式）.md">
+          <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+            <state split_layout="SPLIT">
+              <first_editor relative-caret-position="81">
+                <caret line="3" lean-forward="true" selection-start-line="3" selection-end-line="3" />
+              </first_editor>
               <second_editor />
             </state>
           </provider>
@@ -93,6 +95,18 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="PackagesPane" />
+      <pane id="ProjectPane">
+        <subPane>
+          <expand>
+            <path>
+              <item name="DataStructure" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Scratches and Consoles" type="1a2a3e82:ScratchProjectViewPane$MyProjectNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
       <pane id="Scope">
         <subPane subId="Scope 'Project Files'; set:Project Files; class com.intellij.psi.search.scope.ProjectFilesScope">
           <expand>
@@ -108,42 +122,14 @@
             <path>
               <item name="DataStructure" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
               <item name="C:\Users\dk\IdeaProjects\DataStructure" type="442cc68d:ScopeViewTreeModel$RootNode" />
-              <item name="SpringBoot 配置" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="Java基础" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="第二章 设计模式（单例设计模式）.assets" type="9f88c78c:ScopeViewTreeModel$FileNode" />
             </path>
             <path>
               <item name="DataStructure" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
               <item name="C:\Users\dk\IdeaProjects\DataStructure" type="442cc68d:ScopeViewTreeModel$RootNode" />
-              <item name="左神算法" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-            </path>
-            <path>
-              <item name="DataStructure" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
-              <item name="C:\Users\dk\IdeaProjects\DataStructure" type="442cc68d:ScopeViewTreeModel$RootNode" />
-              <item name="左神算法" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-              <item name="第一章" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-            </path>
-            <path>
-              <item name="DataStructure" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
-              <item name="C:\Users\dk\IdeaProjects\DataStructure" type="442cc68d:ScopeViewTreeModel$RootNode" />
-              <item name="左神算法" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-              <item name="第三章" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-            </path>
-            <path>
-              <item name="DataStructure" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
-              <item name="C:\Users\dk\IdeaProjects\DataStructure" type="442cc68d:ScopeViewTreeModel$RootNode" />
-              <item name="左神算法" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-              <item name="第二章" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-            </path>
-          </expand>
-          <select />
-        </subPane>
-      </pane>
-      <pane id="PackagesPane" />
-      <pane id="ProjectPane">
-        <subPane>
-          <expand>
-            <path>
-              <item name="DataStructure" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Scratches and Consoles" type="1a2a3e82:ScratchProjectViewPane$MyProjectNode" />
+              <item name="Java基础" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="线程" type="9f88c78c:ScopeViewTreeModel$FileNode" />
             </path>
           </expand>
           <select />
@@ -154,7 +140,8 @@
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/左神算法" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="nodejs.jest.jest_package" value="" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="settings.editor.selected.configurable" value="editor.preferences.import" />
@@ -199,6 +186,7 @@
       <workItem from="1564149838475" duration="251000" />
       <workItem from="1564195542530" duration="59000" />
       <workItem from="1564322202323" duration="540000" />
+      <workItem from="1565346805458" duration="212000" />
     </task>
     <task id="LOCAL-00001" summary="左神算法第一章">
       <created>1563462310276</created>
@@ -246,13 +234,13 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="9714000" />
+    <option name="totallyTimeSpent" value="9926000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="223" y="36" width="1523" height="1019" extended-state="0" />
-    <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.17429939" />
+      <window_info id="Alibaba Cloud Explorer" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.17634997" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Designer" order="2" />
       <window_info id="JRebel" order="3" side_tool="true" />
@@ -260,6 +248,7 @@
       <window_info id="Capture Tool" order="5" />
       <window_info id="UI Designer" order="6" />
       <window_info id="Favorites" order="7" side_tool="true" />
+      <window_info anchor="bottom" id="Alibaba Cloud View" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
       <window_info anchor="bottom" id="Run" order="2" />
@@ -275,6 +264,7 @@
       <window_info anchor="bottom" id="JRebel Executor" order="12" />
       <window_info anchor="bottom" id="JRebel Console" order="13" side_tool="true" />
       <window_info anchor="bottom" id="MyBatis Log" order="14" />
+      <window_info anchor="right" id="Alibaba Log Console" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -318,6 +308,22 @@
     <entry file="file://$PROJECT_DIR$/左神算法/第一章.md" />
     <entry file="file://$PROJECT_DIR$/左神算法/第二章.md" />
     <entry file="file://$PROJECT_DIR$/左神算法/第二章/第二章.md" />
+    <entry file="file://$PROJECT_DIR$/Java基础/第一章.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor />
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/左神算法/第三章/第三章.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor />
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/README.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="SPLIT">
@@ -336,27 +342,36 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Java基础/第一章.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="SPLIT">
-          <first_editor />
-          <second_editor />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/左神算法/第三章/第三章.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="SPLIT">
-          <first_editor />
-          <second_editor />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/左神算法/第二章/2.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="SPLIT">
           <first_editor relative-caret-position="27">
             <caret line="1" selection-start-line="1" selection-end-line="1" />
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Java基础/第一章 基础回顾.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="-324" />
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Java基础/线程/DeadLock.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="108">
+          <caret line="4" column="19" selection-start-line="4" selection-start-column="19" selection-end-line="4" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Java基础/第二章 设计模式（单例设计模式）.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="81">
+            <caret line="3" lean-forward="true" selection-start-line="3" selection-end-line="3" />
           </first_editor>
           <second_editor />
         </state>
