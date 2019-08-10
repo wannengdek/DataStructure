@@ -30,15 +30,12 @@ class Window2 extends Thread{
             synchronized (Window2.class){//Class clazz = Window2.class,Window2.class只会加载一次
                 //错误的方式：this代表着t1,t2,t3三个对象
 //              synchronized (this){
-
                 if(ticket > 0){
-
                     try {
                         Thread.sleep(100);
                     } catch (InterruptedException e) {
                         e.printStackTrace();
                     }
-
                     System.out.println(getName() + "：卖票，票号为：" + ticket);
                     ticket--;
                 }else{

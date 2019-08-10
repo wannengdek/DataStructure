@@ -18,9 +18,19 @@
 
 [2、SpringBoot配置redis](https://github.com/wannengdek/DataStructure/blob/master/SpringBoot%20%E9%85%8D%E7%BD%AE/SpringBoot%E9%85%8D%E7%BD%AEredis/SpringBoot%E9%85%8D%E7%BD%AEredis.md)
 
+## Spring Boot 秒杀系统
 
+[SpringBoot秒杀体统（一）Dao 层](https://github.com/wannengdek/DataStructure/blob/master/SpringBoot 配置/SpringBoot秒杀系统/SpringBoot秒杀体统（一）Dao 层.md)
+
+[SpringBoot秒杀系统（二）Service层](https://github.com/wannengdek/DataStructure/blob/master/SpringBoot 配置/SpringBoot秒杀系统/SpringBoot秒杀系统（二）Service层.md)
+
+[SpringBoot秒杀系统（三）web 层](https://github.com/wannengdek/DataStructure/blob/master/SpringBoot 配置/SpringBoot秒杀系统/SpringBoot秒杀系统（三）web 层.md)
+
+[Spring Boot秒杀系统（四）高并发优化](https://github.com/wannengdek/DataStructure/blob/master/SpringBoot 配置/SpringBoot秒杀系统/Spring Boot秒杀系统（四）高并发优化.md)
 
 # 数据库优化
+
+
 
 
 
@@ -35,63 +45,23 @@
 
 
 
-```
-@Select("select * from seckill where seckill_id = #{seckillId}")
-Seckill queryById(@Param("seckillId") Integer seckillId);
-
-List<Seckill> queryAll(@Param("offet")Integer offet , @Param("limit")Integer limit);
-```
 
 
 
 
 
-```
-SuccessKilled queryByIdWithSeckill();
-```
 
 
 
 
 
-```
-<select id="queryById" resultType="springboot.seckill.bean.Seckill">
-  select * from seckill where seckill_id = #{seckillId}
-</select>
-
-<select id="queryAll" resultType="springboot.seckill.bean.Seckill">
-  select * from seckill
-  order by create_time desc limit #{offset},#{limit}
-</select>
-```
 
 
 
 
 
-```
-  <insert id="insertSuccessKilled" >
 
-    insert ignore into success_killed (seckill_id,user_phone)
-    values (#{seckillId},#{userPhone})
-  </insert>
-<!--   主键冲突，报错   返回0 -->
-  <select id="queryByIdWithSeckill" resultType="springboot.seckill.bean.SuccessKilled">
-    select
-        sk.seckill_id,
-        sk.user_phone,
-        sk.create_time,
-        sk.state,
-        s.seckill_id "seckill.seckill_id",
-        s.name "seckill.name",
-        s.number "seckill.number",
-        s.start_time "seckill.start_time",
-        s.end_time "seckill.end_time",
-        s.create_time "seckill.create_time"
-    from  success_killed sk
-    inner join seckil s on sk.seckill_id = s.seckill_id
-    where sk.seckill_id = #{seckillId}
-  </select>
-<!--  根据id 查询 SuccessKilled 并携带秒杀产品对象实体      -->
-```
+
+
+
 
