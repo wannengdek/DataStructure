@@ -1,5 +1,9 @@
 ## SpringBoot秒杀系统（二）Service层
 
+项目地址：https://github.com/wannengdek/SpringBoot-Seckill
+
+如果项目对您有所帮助，麻烦帮忙点亮小⭐⭐
+
 Sservice层又称业务层，用来实现相关业务。需要将DAO层写好的数据操作在service 层中进行拼装。
 
 对于秒杀，需要查询所有秒杀记录和单条秒记录，还有就是不能让用户提前知道秒杀地址，需要先输出一个秒杀地址。还有就是执行秒杀的操作接口。

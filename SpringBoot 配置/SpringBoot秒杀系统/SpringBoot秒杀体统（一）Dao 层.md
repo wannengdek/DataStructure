@@ -2,6 +2,10 @@
 
 [学习自慕课网](https://www.imooc.com/u/2145618/courses?sort=publish)，原项目为SSM，现改造为springboot项目。
 
+项目地址：https://github.com/wannengdek/SpringBoot-Seckill
+
+如果项目对您有所帮助，麻烦帮忙点亮小⭐⭐
+
 ### 秒杀系统业务流程
 
 1、问题在于如何不超卖、使用户如何不超买。

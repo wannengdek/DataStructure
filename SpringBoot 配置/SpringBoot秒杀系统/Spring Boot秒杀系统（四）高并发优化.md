@@ -1,5 +1,9 @@
 ## Spring Boot秒杀系统（四）高并发优化
 
+项目地址：https://github.com/wannengdek/SpringBoot-Seckill
+
+如果项目对您有所帮助，麻烦帮忙点亮小⭐⭐
+
 ### 并发发生在哪？
 
 红色部分为可能出现高并发的点
