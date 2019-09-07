@@ -7,6 +7,17 @@ public class RNG
     private Integer maximumValue;
     private Integer minimumValue;
 
+    public RNG()
+    {
+
+    }
+
+    public RNG(Integer maximumValue, Integer minimumValue)
+    {
+        this.maximumValue = maximumValue;
+        this.minimumValue = minimumValue;
+    }
+
     public static Integer RNG(Integer maximumValue, Integer minimumValue)
     {
         Random r = new Random();
@@ -15,8 +26,4 @@ public class RNG
         return randomnum;
     }
 
-    public static void main(String[] args)
-    {
-        System.out.println(RNG(1000, 100));
-    }
 }

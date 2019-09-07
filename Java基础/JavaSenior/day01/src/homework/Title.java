@@ -8,6 +8,16 @@ public class Title
     private Integer score ;
     private Integer value ;
 
+    public Title()
+    {
+    }
+
+    public Title(Integer score, Integer value)
+    {
+        this.score = score;
+        this.value = value;
+    }
+
     public Integer getScore()
     {
         return score;

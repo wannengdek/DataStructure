@@ -13,6 +13,7 @@ public class Utils
         System.out.println("press 3 to view a help menu");
         System.out.println("press 4 to exit");
     }
+
     public static void helpMenu()
     {
         System.out.println("游戏规则如下");
@@ -24,17 +25,20 @@ public class Utils
         System.out.println("6.对于每一轮，每个玩家将玩一张牌，牌值将增加到该轮的游戏总数中。");
         System.out.println("如果游戏总数小于或等于21，玩家将获得使用该牌的分数。然而，如果游戏总数大于21，则没有分数被分配");
         System.out.println("给玩最后一张牌的玩家，导致分数变得大于21");
+        System.out.println();
     }
 
-    public static void main(String[] args)
-    {
-        menu();
-        helpMenu();
-    }
     public static int inputNum()
     {
         Scanner scanner = new Scanner(System.in);
         int num = scanner.nextInt();
-        return  num;
+        return num;
     }
+
+    class t
+    {
+        public  int i ;
+    }
+
+
 }

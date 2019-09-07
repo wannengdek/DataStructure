@@ -12,17 +12,24 @@ public class Player
     private Integer score;
     private Title[] titles;
     private Title lastTilePlayed;
-    private Integer roundsWon ;
+    private Integer roundsWon;
 
     public Player()
     {
-        this.score = 0;
+
     }
 
-    public Player(String username,int score)
+    public Player(int score, Integer roundsWon)
+    {
+        this.score = score;
+        this.roundsWon = 0;
+    }
+
+    public Player(String username, int score, Integer roundsWon)
     {
         this.name = username;
-        this.score = score ;
+        this.score = score;
+        this.roundsWon = 0;
     }
 
     public Player(String name, Integer score, Title[] titles, Title lastTilePlayed, Integer roundsWon)
@@ -33,8 +40,6 @@ public class Player
         this.lastTilePlayed = lastTilePlayed;
         this.roundsWon = roundsWon;
     }
-
-
 
 
     public String getName()

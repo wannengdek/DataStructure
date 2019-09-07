@@ -28,14 +28,21 @@ public class Test10_1
      */
     public static int fei2(int n)
     {
-        int num = 0;
-        int a[] = new int[]{1,1};
-
-        for (int i = 0; i <n; i++)
+        if(n<=1)
         {
-            num = 1;
+            return n;
         }
-        return num;
+        int pre1=1;//前一项为1
+        int pre2=0;//前两项为0
+        int fibN=0;
+        for(int i=2;i<=n;i++)
+        {
+            fibN=pre1+pre2;
+            pre2=pre1;//前进一位
+            pre1=fibN;
+        }
+        return fibN;
+
     }
     public static void main(String[] args)
     {
