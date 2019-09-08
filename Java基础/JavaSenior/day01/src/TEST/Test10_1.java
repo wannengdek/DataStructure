@@ -11,16 +11,17 @@ public class Test10_1
 {
     /**
      * 直接递归
+     *
      * @param n
      * @return
      */
     public static int fei(int n)
     {
-        if (n<=1)
+        if (n <= 1)
         {
             return n;
         }
-        return fei(n-1)+fei(n-2);
+        return fei(n - 1) + fei(n - 2);
     }
 
     /**
@@ -28,24 +29,72 @@ public class Test10_1
      */
     public static int fei2(int n)
     {
-        if(n<=1)
+        if (n <= 1)
         {
             return n;
         }
-        int pre1=1;//前一项为1
-        int pre2=0;//前两项为0
-        int fibN=0;
-        for(int i=2;i<=n;i++)
+        int pre1 = 1;//前一项为1
+        int pre2 = 0;//前两项为0
+        int fibN = 0;
+        for (int i = 2; i <= n; i++)
         {
-            fibN=pre1+pre2;
-            pre2=pre1;//前进一位
-            pre1=fibN;
+            fibN = pre1 + pre2;
+            pre2 = pre1;//前进一位
+            pre1 = fibN;
         }
         return fibN;
 
     }
+
     public static void main(String[] args)
     {
         System.out.println(fei(2));
     }
+
+
+    class TreeNode
+    {
+        TreeNode left;
+        TreeNode right;
+        int val;
+        TreeNode(int x)
+        {
+            this.val = x;
+        }
+    }
+
+    public int maxDepth(TreeNode root)
+    {
+        int max = 0;
+        int leftMax = 0;
+        int rightMax = 0;
+        if (root == null)
+        {
+            return 0;
+        }
+        else
+        {
+            max++;
+            leftMax = maxDepth(root.left);
+            rightMax = maxDepth(root.right);
+            if (leftMax >= rightMax)
+            {
+                max = max + leftMax;
+                return max;
+            }
+            else
+            {
+                max = max + rightMax;
+                return max;
+            }
+        }
+    }
+
+
 }
+
+
+
+
+
+
