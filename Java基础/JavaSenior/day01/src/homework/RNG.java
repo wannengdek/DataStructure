@@ -9,7 +9,6 @@ public class RNG
 
     public RNG()
     {
-
     }
 
     public RNG(Integer maximumValue, Integer minimumValue)

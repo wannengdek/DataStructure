@@ -11,19 +11,17 @@ public class Game
     public static Player robot = new Player("robot", 0, 0);
 
     public static int totalScope = 0;
-    public static int rounds = 0;
 
+    public static int rounds = 0;
 
     public static int playerWinTimes = 0;
     public static int robotWinTimes = 0;
-
 
     public static Title palyerTitle1 = new Title(1, 5);
     public static Title palyerTitle2 = new Title(2, 4);
     public static Title palyerTitle3 = new Title(3, 3);
     public static Title palyerTitle5 = new Title(5, 2);
     public static Title palyerTitle7 = new Title(7, 1);
-
 
     public static Title robotTitle1 = new Title(1, 5);
     public static Title robotTitle2 = new Title(2, 4);
@@ -35,7 +33,6 @@ public class Game
     public static int playerTitleNumer = 0;
     public static Title[] titlesRobot = new Title[5];
     public static int robotTitleNumer = 0;
-
 
     public static void playGame()
     {
@@ -102,13 +99,11 @@ public class Game
                             titlesPlayer[playerTitleNumer] = selectPlayerTitle(playerNum);
                             playerTitleNumer++;
                             player1.setLastTilePlayed(selectPlayerTitle(playerNum));
-
                             updatePlayerTitle(playerNum);
                         }
                     }
                     int playerOldScore = player1.getScore();
                     totalScope = totalScope + playerNum;
-
                     player1.setScore(playerOldScore + playerNewScore);
                     System.out.println(player1.getName() + "    :玩家出    " + playerNum + "   游戏总数:   " + totalScope + "  人类玩家得分:  " + (playerOldScore + playerNewScore));
                     System.out.println();
@@ -340,12 +335,10 @@ public class Game
                         flag = !flag;
                     }
                 }
-
-
             }
         }
-
         //此回合结束 进行结算
+
         int playerLastScore = player1.getScore();
         int titlePlayer5 = tiltle5Use(player1) ? 0 : -3;
         if (titlePlayer5 == -3)
@@ -395,9 +388,7 @@ public class Game
             System.out.println(player1.getName() + " win this time ");
             System.out.println(player1.getName() + "此時：" + player1.toString());
         }
-
     }
-
 
     public static boolean tiltle5Use(Player player)
     {
@@ -634,9 +625,9 @@ public class Game
         robotTitleNumer = 0;
 
         player1.setScore(0);
-        player1.setRoundsWon(0);
+//        player1.setRoundsWon(0);
         robot.setScore(0);
-        robot.setRoundsWon(0);
+//        robot.setRoundsWon(0);
 
     }
 

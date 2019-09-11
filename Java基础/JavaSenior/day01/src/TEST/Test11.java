@@ -46,8 +46,6 @@ public class Test11
                 mid = find(array);
                 return mid;
             }
-
-
             mid = (index1 + index2) >> 1;
             if (array[mid] >= array[index1])
             //  整个数组中间的数 大于  第一个数   那中间的数还在前面的数组中

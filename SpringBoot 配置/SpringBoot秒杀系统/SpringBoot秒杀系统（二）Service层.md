@@ -122,13 +122,15 @@ public Exposer exportSeckillUrl(Integer seckillId) {
 
 **正常得到秒杀地址**
 
-![1565280458452](SpringBoot秒杀系统（二）.assets/1565280458452.png)
+![1565280458452](https://ws3.sinaimg.cn/large/006nELAQly1g6td6k11xpj30yo0b8jsi.jpg)
 
 因为当前测试时间是在秒杀开始时间   并且早于结束时间的 ，所以可以得到秒杀地址的md5值，
 
 **早于开始秒杀时间**
 
-![1565280662869](SpringBoot秒杀系统（二）.assets/1565280662869.png)
+![1565280662869](https://wx1.sinaimg.cn/large/006nELAQly1g6td75rw7ij30uz0dbwg5.jpg)
+
+
 
 更改数据库时间之后发现无法的到秒杀地址。
 
@@ -265,23 +267,25 @@ public enum SeckillStatEnum {
 
 ##### 第一次购买
 
-![1565281277853](SpringBoot秒杀系统（二）.assets/1565281277853.png)
+![1565281277853](https://ws3.sinaimg.cn/large/006nELAQly1g6td7sst3ej314a0jvadh.jpg)
 
 ##### 用同样的手机号第二次购买
 
-![1565281322414](SpringBoot秒杀系统（二）.assets/1565281322414.png)
+![1565281322414](https://ws3.sinaimg.cn/large/006nELAQly1g6td8aju2gj314b0grdir.jpg)
+
+
 
 会报错，且数据库中没有插入新的订单
 
 ##### 修改秒杀地址会报错
 
-![1565315593123](SpringBoot秒杀系统（二）.assets/1565315593123.png)
+![1565315593123](https://wx1.sinaimg.cn/large/006nELAQly1g6td8rhrcdj31450ih775.jpg)
 
 会报秒杀数据修改的错误。
 
 ##### 用不同的手机号购买
 
-![1565281405827](SpringBoot秒杀系统（二）.assets/1565281405827.png)
+![1565281405827](https://wx2.sinaimg.cn/large/006nELAQly1g6td96qahhj312a0j10vk.jpg)
 
 可以继续进行购买，且数据库可以得到对应的信息。
 
@@ -307,7 +311,7 @@ public enum SeckillStatEnum {
                 System.out.println(e1.getMessage());
             }
         } else {
-            //秒杀未开启
+            //秒杀未开启	
             System.out.println("秒杀wei开启");
         }
     }
@@ -315,17 +319,15 @@ public enum SeckillStatEnum {
 
 #### 时间合适：
 
-![1565315024505](SpringBoot秒杀系统（二）.assets/1565315024505.png)
+![1565315024505](https://wx1.sinaimg.cn/large/006nELAQly1g6td9nzqqgj311p0fldho.jpg)
 
 #### 未到秒杀时间：
 
-![1565315134925](SpringBoot秒杀系统（二）.assets/1565315134925.png)
+![1565315134925](https://wx4.sinaimg.cn/large/006nELAQly1g6td9zoh7oj30ys0eiq4j.jpg)
 
 #### 修改开始时间之后重新测试：
 
-![1565315239693](SpringBoot秒杀系统（二）.assets/1565315239693.png)
-
-
+![1565315239693](https://ws1.sinaimg.cn/large/006nELAQly1g6tdadkp8zj31030fjjtw.jpg)
 
 
 
