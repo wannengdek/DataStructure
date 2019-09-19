@@ -70,13 +70,35 @@ public class Test7 {
          * 而在构建左子树时这个偏移量不需要变化是因为中序遍历是以左子树开头的 所以根节点的下标位置的数字就是左子树的规模
          * 他的左边没有其他元素占用位置
          */
-
         return root;
     }
 
+
+
+
     public static void main(String[] args) {
-        int[] a = new int[]{1,2,4,7,3,5,6,8};
-        int[] b = new int[]{};
+
+        pre(5,0,5);
+
 
     }
+    public  static int post[]={3,4,2,6,5,1};
+    public  static int mid[]={3,2,4,1,6,5};
+
+    public  static void pre(int root, int start, int end)	      //当前树的根节点  在后序序列中的起始位置  结束位置
+    {
+        if(start>end)
+            return ;
+        int i=start;
+        while(i<end&&mid[i]!=post[root])
+        {
+            i++;
+        }
+        //寻找中序序列中根节点的位置
+        System.out.println(post[root]);
+        pre(root-1-end+i,start,i-1);	      //查询左子树
+        pre(root-1,i+1,end);		      //查询右子树
+    }
+
+
 }

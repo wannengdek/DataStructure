@@ -1,96 +1,203 @@
 package TEST;
 
-import java.util.HashSet;
-import java.util.Scanner;
-import java.util.Set;
-
 /**
  * @author : dk
  * @date : 2019/9/9 18:53
  * @description :
- *
  */
 
 public class Test19
 {
+    //    public static int
+    public static void second()
+    {
+        int num = 0;
+        int num_now = 0;
+        //车辆数
+        int[] a = new int[7];
+        for (int m = 0; m < a.length - 1; m++)
+        {
+            a[m] = 0;
+        }
+        boolean[] b = new boolean[7];
+        for (int j = 0; j < b.length; j++)
+        {
+            b[j] = true;
+        }
+        int i = 0;
+        int wastTime = 50 ;
+        int addCarTime = 120;
+        for (i = 1; ; i++)
+        {
+            System.out.println("时间：" + i + " 已走人数：" + num);
+            int ran = (int) (1 + Math.random() * (5 - 0 + 1)); //随机车位
+            System.out.println("随机车位：" + ran);
+            if (b[ran])
+            {
+                a[ran] = i
+                        + (int)(1+Math.random()*(240-60+1)) + addCarTime;
+                System.out.println("随机上车花费时间是："+(int)(1+Math.random()*(240-60+1))+" s ");
+                b[ran] = false;
+                num_now = (int) (1 + Math.random() * (3 - 1 + 1));//随机人数
+                num = num + num_now;
+                System.out.println("随机人数：" + num_now);
+                System.out.println("------------------------------");
+                i = i +(int)(1+Math.random()*(30-1+1));
+                //下一个人到来的随机时间
+            }
+            else
+            {
+                if (a[ran] < i)
+                {
+                    a[ran] = i+ (int)(1+Math.random()*(240-60+1)) + addCarTime;
+                    System.out.println("随机上车花费时间是："+(int)(1+Math.random()*(240-60+1))+" s ");
+                    b[ran] = false;
+                    num_now = (int) (1 + Math.random() * (3 - 1 + 1));//随机人数
+                    num = num + num_now;
+                    System.out.println("随机人数：" + num_now);
+                    System.out.println("------------------------------");
+                    i = i +(int)(1+Math.random()*(30-1+1));
+                    //下一个人到来的随机时间
+                }
+                else if (a[ran] > i)
+                {
+                    ran = (int) (1 + Math.random() * (5 - 0 + 1));
+                    int flag = 1;
+                    while (flag == 1)
+                    {
+                        if (a[ran] > i)
+                        {
+                            a[ran] = i+ (int)(1+Math.random()*(240-60+1)) + addCarTime;
+                            System.out.println("随机上车花费时间是："+(int)(1+Math.random()*(240-60+1))+" s ");
+                            b[ran] = false;
+                            num_now = (int) (1 + Math.random() * (3 - 1 + 1));//随机人数
+                            num = num + num_now;
+                            System.out.println("随机人数：" + num_now);
+                            System.out.println("------------------------------");
+                            i = i +(int)(1+Math.random()*(30-1+1));
+                            //下一个人到来的随机时间
+                            flag = 0;
+                        }
+                        else
+                        {
+                            ran = (int) (1 + Math.random() * (5 - 0 + 1));
+                        }
+                    }
+                }
+            }
+            if (num > 1000)
+            {
+                int time = a[0];
+                for (int j = 0; j < a.length-1; j++)
+                {
+                    if (time< a[j])
+                    {
+                        time = a[j];
+                    }
+                }
+                System.out.println("time" +time);
+                break;
+            }
+        }
+    }
 
     public static void main(String[] args)
     {
-        Scanner scanner = new Scanner(System.in);
-        int cow = scanner.nextInt();
-        int number = (int)( Math.pow(2,cow)-1);
-        int a[] = new int[number+1];
-        for (int i = 0; i <a.length-1 ; i++)
-        {
-            a[i]=scanner.nextInt();
-        }
-        int num1 = scanner.nextInt();
-        int num2 = scanner.nextInt();
-
-
-//        9 6 15 2 -1 12 25 -1 -1 -1 -1 -1 -1 20 37
-        int i = find(cow, a, number, num1, num2);
-        System.out.println(i);
-//        Scanner scanner = new Scanner(System.in);
-//        int c=scanner.nextInt();
-//        int n = (int) (Math.pow(2, c)-1);
-//        HashMap<Integer, Integer> map = new HashMap<Integer, Integer>();
-//        for(int i=0;i<n;i++) {
-//            int t = scanner.nextInt();
-//            map.put(t, i);
-//        }
-//        int a = scanner.nextInt();
-//        a = map.get(a);
-//        int b = scanner.nextInt();
-//        b = map.get(b);
-//        for(;;) {
-//            if(a==b) {
-//                System.out.println(map.get(a));
-//                break;
-//            }
-//            if(a>b) {
-//                b = b/2-1;
-//            }
-//            if(a<b) {
-//                a = a/2-1;
-//            }
-//        }
-
+        second();
     }
-    public static int find(int cow, int[] a, int number,int num1,int num2)
+
+    public static void third()
     {
-        if (num1==num2)
+        int num = 0;
+        int num_now = 0;
+        //车辆数
+        int[] a = new int[14];
+        for (int m = 0; m < a.length - 1; m++)
         {
-            return -2;
+            a[m] = 0;
         }
-        Set<Integer> set =new HashSet<>();
-        int n1 =mid(num1);
-        int n2 =mid(num2);
-        if (n1==n2)
+        boolean[] b = new boolean[14];
+        for (int j = 0; j < b.length; j++)
         {
-            return a[n1];
+            b[j] = true;
         }
-        while (n1==n2)
+        int i = 0;
+        int addCarTime = 240;
+        for (i = 1; ; i++)
         {
-            if (mid(n1)<n2)
+            System.out.println("时间：" + i + " 已走人数：" + num);
+            int ran = (int) (1 + Math.random() * (13 - 0 + 1)); //随机车位
+            System.out.println("随机车位：" + ran);
+            if (b[ran])
             {
-                if (mid(n2)>=0)
+                a[ran] = i + (int)(1+Math.random()*(300-180+1)) + addCarTime;
+                System.out.println("随机上车花费时间是："+(int)(1+Math.random()*(300-180+1))+" s ");
+                b[ran] = false;
+                num_now = (int) (1 + Math.random() * (3 - 1 + 1));//随机人数
+                num = num + num_now;
+                System.out.println("随机人数：" + num_now);
+                System.out.println("------------------------------");
+
+                i = i +(int)(1+Math.random()*(30-1+1));
+                //下一个人到来的随机时间
+            }
+            else
+            {
+                if (a[ran] < i)
                 {
-                    n2 = mid(n2);
+                    a[ran] = i+ (int)(1+Math.random()*(300-180+1)) + addCarTime;
+                    System.out.println("随机上车花费时间是："+(int)(1+Math.random()*(300-180+1))+" s ");
+                    b[ran] = false;
+                    num_now = (int) (1 + Math.random() * (3 - 1 + 1));//随机人数
+                    num = num + num_now;
+                    System.out.println("随机人数：" + num_now);
+                    System.out.println("------------------------------");
+                    i = i +(int)(1+Math.random()*(30-1+1));
+                    //下一个人到来的随机时间
+                }
+                else if (a[ran] > i)
+                {
+                    ran = (int) (1 + Math.random() * (13 - 0 + 1));
+                    int flag = 1;
+                    while (flag == 1)
+                    {
+                        if (a[ran] > i)
+                        {
+                            a[ran] = i+ (int)(1+Math.random()*(300-180+1)) + addCarTime;
+                            System.out.println("随机上车花费时间是："+(int)(1+Math.random()*(300-180+1))+" s ");
+                            b[ran] = false;
+                            num_now = (int) (1 + Math.random() * (3 - 1 + 1));//随机人数
+                            num = num + num_now;
+                            System.out.println("随机人数：" + num_now);
+                            System.out.println("------------------------------");
+                            i = i +(int)(1+Math.random()*(30-1+1));
+                            //下一个人到来的随机时间
+                            flag = 0;
+                        }
+                        else
+                        {
+                            ran = (int) (1 + Math.random() * (13 - 0 + 1));
+                        }
+                    }
                 }
             }
-            else if (mid(n1)>n2)
+
+
+            if (num > 1000)
             {
-                if (mid(n1)>=0)
+                int time = a[0];
+                for (int j = 0; j < a.length-1; j++)
                 {
-                    n1 = mid(n1);
+                    if (time< a[j])
+                    {
+                        time = a[j];
+                    }
                 }
+                System.out.println("time" +time);
+                break;
             }
         }
-        return a[n1];
     }
-    public static  int mid(int a)
-    {
-        return (int)((a-1)>>1);
-    }
+
 }
+

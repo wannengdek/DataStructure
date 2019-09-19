@@ -1,6 +1,6 @@
 package TEST;
 
-import java.util.*;
+import java.util.ArrayList;
 
 /**
  * @author : dk
@@ -11,58 +11,39 @@ import java.util.*;
 public class xiaoSan extends San
 {
 
-    private int xiaol1;
-    public xiaoSan()
+    static class Song
     {
-        super();
+        private  int name ;
+
+        public int getName()
+        {
+            return name;
+        }
+        public void setName(int name)
+        {
+            this.name = name;
+        }
     }
-    public void get()
-    {
-        super.get();
-    }
-
-
-
     public static void main(String[] args)
     {
-//        xiaoSan xiaoSan = new xiaoSan();
-//        xiaoSan.get();
-
-        Scanner scanner = new Scanner(System.in);
-        int m = scanner.nextInt();
-        int n = scanner.nextInt();
-        HashMap<Integer,Integer> hashMap = new HashMap();
-        int a [] = new int[2];
-        for(int i =0;i<m ;i++)
-        {
-            int key =scanner.nextInt();
-            int v = scanner.nextInt();
-            hashMap.put(key,v);
-        }
-        int a3 = find(m,n,hashMap);
-
-
-    }
-
-    public static int find(int m, int n, HashMap<Integer, Integer> hashMap)
-    {
-        int num = 0;
+        Song song1 = new Song();
+        Song song2 = new Song();
         ArrayList arrayList = new ArrayList();
-        for (Map.Entry<Integer, Integer> entry : hashMap.entrySet()) {
-            if (entry.getKey()>n)
+        arrayList.add(song2);
+        arrayList.add(song1);
+
+        for (int i = 0; i < arrayList.size(); i++)
+        {
+            if (arrayList.get(i).equals(song1))
             {
-                num = num +entry.getValue();
+                System.out.println("第"+ (i+1)+"个对象是给定的对象");
             }
-            hashMap.replace(entry.getKey(),entry.getValue(),0);
-            if (entry.getKey()<n)
-            {
-                arrayList.add(entry.getKey());
-                arrayList.add(entry.getValue());
-            }
-            System.out.println("key = " + entry.getKey() + ", value = " + entry.getValue());
         }
 
-        return 0;
+
+
+
     }
+
 
 }

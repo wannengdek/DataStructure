@@ -1,0 +1,9 @@
+#BlueJ class context
+comment0.target=RNG
+comment1.params=
+comment1.target=RNG()
+comment2.params=maximumValue\ minimumValue
+comment2.target=RNG(java.lang.Integer,\ java.lang.Integer)
+comment3.params=maximumValue\ minimumValue
+comment3.target=java.lang.Integer\ RNG(java.lang.Integer,\ java.lang.Integer)
+numComments=4

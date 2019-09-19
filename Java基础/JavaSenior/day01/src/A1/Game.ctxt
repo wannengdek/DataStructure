@@ -1,0 +1,25 @@
+#BlueJ class context
+comment0.target=Game
+comment1.params=
+comment1.target=void\ playGame()
+comment10.params=
+comment10.target=void\ initTitle()
+comment11.params=
+comment11.target=java.lang.String\ regist()
+comment2.params=player
+comment2.target=boolean\ tiltle5Use(Player)
+comment3.params=
+comment3.target=int\ randomNumber()
+comment4.params=playerNum
+comment4.target=Title\ selectPlayerTitle(int)
+comment5.params=robotNum
+comment5.target=Title\ selectRobotTitle(int)
+comment6.params=args
+comment6.target=void\ main(java.lang.String[])
+comment7.params=updateplayerNum
+comment7.target=void\ updatePlayerTitle(int)
+comment8.params=playerNum
+comment8.target=void\ updateRobotTitle(int)
+comment9.params=
+comment9.target=void\ menu()
+numComments=12
