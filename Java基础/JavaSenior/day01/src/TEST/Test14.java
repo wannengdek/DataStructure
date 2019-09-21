@@ -66,15 +66,16 @@ public class Test14
         {
             return 2;
         }
-        int max = 0;
+
         int threeTime = target/3;
         target = target-3*threeTime;
         if (target==1)
         {
             threeTime -=1;
+            target +=3;
             // 对于 最后一段  4米的长度   2*2  要大于3*1   也就是如果刚好剩下1米时，要将上一步减去的3m加回来
         }
-        int
-        return max;
+        int twoTime = target/2;
+        return (int)Math.pow(3,threeTime)*(int)Math.pow(2,twoTime);
     }
 }

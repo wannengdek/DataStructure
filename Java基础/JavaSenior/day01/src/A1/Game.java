@@ -40,23 +40,24 @@ public class Game
     {
         int i = 0;
         boolean flag = true;
+
+        boolean b[]=new boolean[]{true,false};
+        int selectWhoFirst = RNG.RNG(1,0);
+        flag=b[selectWhoFirst];
+
         while (i != 2)
         {
             if (flag)
             {
-                
                 if (totalScope >= 21)
                 {
                     if (totalScope == 21)
                     {
-                        
                         System.out.println(robot.getName() + " make it 21 point !!! " + " The score is " + robot.getScore());
                         i = 2;
                     }
                     else
-                    
                     {
-                        
                         System.out.println("robot out");
                         System.out.println("result");
                         i = 2;
@@ -98,6 +99,7 @@ public class Game
                         else
                         {
                             flag1 = false;
+
                             titlesPlayer[playerTitleNumer] = selectPlayerTitle(playerNum);
                             playerTitleNumer++;
                             player1.setLastTilePlayed(selectPlayerTitle(playerNum));
@@ -109,6 +111,7 @@ public class Game
                     totalScope = totalScope + playerNum;
 
                     player1.setScore(playerOldScore + playerNewScore);
+
                     System.out.println(player1.getName() + "    :player    " + playerNum + "   total:   " + totalScope + "  player socre:  " + (playerOldScore + playerNewScore));
                     System.out.println();
                     flag = !flag;
@@ -334,8 +337,6 @@ public class Game
                         flag = !flag;
                     }
                 }
-
-
             }
         }
 
@@ -349,7 +350,6 @@ public class Game
             System.out.println(player1.getName() + " finall socre " + (playerLastScore + titlePlayer5));
         }
         player1.setScore((playerLastScore + titlePlayer5));
-
 
         int robotLastScore = robot.getScore();
         int titleRobot5 = tiltle5Use(robot) ? 0 : -3;
@@ -369,7 +369,7 @@ public class Game
             System.out.println(robot.getName() + " win this time ");
             System.out.println("Now robot：" + robot.toString());
         }
-        else if (robot.getScore() == (int) player1.getScore())
+        else if (robot.getScore() == player1.getScore())
         {
             int wintimes = robot.getRoundsWon() + 1;
             robot.setRoundsWon(wintimes);
@@ -571,8 +571,10 @@ public class Game
                     System.out.println("Please select the number of rounds");
                     int times = Utils.inputNum();
 
+
                     for (int i = 0; i < times; i++)
                     {
+
                         playGame();
                         System.out.println("Number " + (i + 1) + " result");
                         System.out.println("Both players have 5 tiles each {1, 2, 3, 5, 7}");

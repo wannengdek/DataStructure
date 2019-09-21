@@ -540,7 +540,6 @@ public class Game
                 {
                     System.out.println("Please select the number of rounds");
                     int times = Utils.inputNum();
-
                     for (int i = 0; i < times; i++)
                     {
                         playGame();
@@ -552,7 +551,6 @@ public class Game
                         }
                         initTitle();
                     }
-
                     if (player1.getRoundsWon() > robot.getRoundsWon())
                     //玩家获胜
                     {
